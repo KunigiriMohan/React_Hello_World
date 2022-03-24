@@ -7,3 +7,8 @@ h2{
   color: brown;
   font-size: xx-large;
 }
+img{
+  display: block;
+  margin: 0px auto;
+  width: 25%;
+}
