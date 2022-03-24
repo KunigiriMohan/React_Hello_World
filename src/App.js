@@ -1,12 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+class App extends React.Component{
+  title1='Hello from BridgeLabz using variable'
+  
+  constructor(){
+    super()
+    this.state={
+      title: 'Hello from BridgeLabz using state'
+    }
+  }
 
-function App() {
-  return (
-   <div>
-     <h1>Hello from BridgeLabz</h1>
-   </div>
-  );
+  render(){
+    return(
+      <div>
+        <h1>{this.state.title}</h1>
+        <h2>{this.title1}</h2>
+      </div>
+    );
+  }
 }
 
 export default App;
