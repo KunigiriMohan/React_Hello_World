@@ -4,7 +4,7 @@ import logo from './assets/img/Bridgelab.png'
 
 
 class App extends React.Component{
-  title1='Hello from BridgeLabz using variable'
+  userName=''
   webPage='https://www.bridgelabz.com/'
   
   onClick = ($event) =>{
@@ -14,17 +14,27 @@ class App extends React.Component{
   constructor(){
     super()
     this.state={
-      title: 'Hello from BridgeLabz using state'
+      userName: ''
     }
+  }
+
+  onNameChange =(event) =>{
+    console.log("value is",event.target.value);
+    this.setState({userName:event.target.value})
   }
 
   render(){
     return(
+      <>
       <div>
-        <h1>{this.state.title}</h1>
-        <h2>{this.title1}</h2>
+        <h1>Hello {this.state.userName} from BridgeLabz using variable</h1>
+        <h2>Hello {this.title1} from BridgeLabz using variable</h2>
         <img src={logo} onClick={this.onClick} alt='The BridgeLabz Logo: a Bridge to Employment through lab works'></img>
       </div>
+      <div>
+        <input class='input' onChange={this.onNameChange}/>
+      </div>
+      </>
     );
   }
 }
