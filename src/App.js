@@ -14,13 +14,22 @@ class App extends React.Component{
   constructor(){
     super()
     this.state={
-      userName: ''
+      userName: '',
+      nameError:''
     }
   }
 
   onNameChange =(event) =>{
     console.log("value is",event.target.value);
+    const nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+
     this.setState({userName:event.target.value})
+    if(nameRegex.test(event.target.value)){
+      this.setState({ nameError:''})
+    }
+    else{
+      this.setState({nameError:'Name is incorrect'})
+    }
   }
 
   render(){
@@ -32,9 +41,10 @@ class App extends React.Component{
         <img src={logo} onClick={this.onClick} alt='The BridgeLabz Logo: a Bridge to Employment through lab works'></img>
       </div>
       <div>
-        <input class='input' onChange={this.onNameChange}/>
+        <input class='input' onChange={this.onNameChange}></input>
+        <span className='error-output'>{this.state.nameError}</span>
       </div>
-      </>
+      </> 
     );
   }
 }
