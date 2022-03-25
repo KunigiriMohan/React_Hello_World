@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    
+    width: 205vh;
+    background-color: skyblue;
+    justify-content: space-around;
+    word-spacing: 1cm;
+}
+#p{
+    text-align: center;
+}

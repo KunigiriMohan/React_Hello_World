@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+    font-size: xx-large;
+    color: blue;
+  }
+  h2{
+    text-align: center;
+    color: brown;
+    font-size: xx-large;
+  }
+  img{
+    display: block;
+    margin: 0px auto;
+    width: 20%;
+  }
+  input{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 2px;
+    width: 25%;
+    border: 3px solid black;
+  }
+  .error-output{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic bold;
+    color: red;
+  }
+  ol{
+    list-style-type: decimal;
+    font: 1em sans-serif;
+    font-size: 16px;
+  }
+  p{
+    font: 1em sans-serif;
+    font-size: 16px;
+  }
+  .main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 140, 8);
+    width: 60%;
+    height: 100vh;
+    align-content: center;
+    margin-left: 18%;
+    padding-left: 1cm;
+    padding-right: 1cm;
+    border: 5px solid black;
+  }
+  body{
+    display: block;
+    width: 200vh;
+    flex-direction: row;
+    background-color: rgb(5, 74, 177);
+    height: 70vh;
+  }
+  
